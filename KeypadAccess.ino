@@ -23,9 +23,9 @@ byte colPins[ROWS]={41, 45, 49};     // pins 5-7 on keypad
 // Add another pin to colPins if using 4x4 keypad
 Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS); 
 LiquidCrystal lcd(4, 5, 6, 7, 8, 9); // (rs, e, d4, d5, d6, d7)
-
-char pin[] = {'1','2','3','4','5','6'}; // change the pin as you wish
-char attempt[] = {0,0,0,0,0,0}; // this array holds the values you just typed in and must be the same size as pin
+// array size = length of pin
+char pin[6] = {'1','2','3','4','5','6'}; // change the pin as you wish
+char attempt[6] = {0,0,0,0,0,0}; // this array holds the values you just typed in and must be the same size as pin
 int lenghtPin = 6; // this is the length of the pin. Size is the size of the pin
 int z = 0; // holds the value of the number of buttons presses
 
